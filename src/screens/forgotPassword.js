@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar, TextInput, Text, Dimensions, TouchableOpacity } from 'react-native';
 
-export default class LoginScreen extends React.Component {
+export default class ForgotPasswordScreen extends React.Component {
 
    static navigationOptions = { 
-        title: "Sign in",  
+        title: "Recover Password",  
       };  
 
   render() {  
@@ -16,16 +16,12 @@ export default class LoginScreen extends React.Component {
         </View>
         <View style={styles.inputTextBox}>
             <View style={styles.inputTextContainer}>
-                <Text style={styles.label}>Email</Text>
-                <TextInput style={styles.inputText} placeholder="Email"></TextInput>
-            </View>
-            <View style={styles.inputTextContainer}>
-                <Text style={styles.label}>Password</Text>
-                <TextInput style={styles.inputText}  secureTextEntry={true} placeholder="Password" ></TextInput>
+                <Text style={styles.label}>Enter Recovery Email Address</Text>
+                <TextInput style={styles.inputText} placeholder="Recovery Email"></TextInput>  
             </View>
         </View>
         <View>
-            <TouchableOpacity style={styles.loginButton} onPress={() => this.props.navigation.navigate('table')}><Text style={styles.buttonText} >Login</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.loginButton} onPress={() => this.props.navigation.navigate('resetpassword')}><Text style={styles.buttonText}>Recover Password</Text></TouchableOpacity>
         </View>
       </View>
     );
@@ -39,26 +35,26 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     inputTextContainer:{
-      marginTop: 20
+        marginTop: 20
     },
     inputText:{
-      width: Dimensions.get('window').width-70,
-      borderWidth: 1,
-      borderColor: '#dedede',
-      paddingTop: 5,
-      paddingBottom: 5,
-      paddingLeft: 15,
-      paddingRight: 15,
-      borderRadius: 5,
-      marginTop: 5,
-      fontFamily: 'Quicksand-Light'
+        width: Dimensions.get('window').width-70,
+        borderWidth: 1,
+        borderColor: '#dedede',
+        paddingTop: 5,
+        paddingBottom: 5,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 5,
+        marginTop: 5,
+        fontFamily: 'Raleway'
     },
     label:{
-      fontFamily: 'Quicksand-Bold',
-      marginLeft: 4
+        fontFamily: 'Raleway-Bold',
+        marginLeft: 4
     },
     inputTextBox:{
-      marginTop: 30
+        marginTop: 30
     },
     loginButton:{
         borderRadius: 10,

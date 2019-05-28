@@ -27,17 +27,10 @@ export default class OrderScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
+      width: '100%',
       flex: 1,
-      backgroundColor: 'white',
+      backgroundColor:'#6F0000', 
       alignItems: 'center',
       justifyContent: 'center',
     },
-    popupButton:{
-        width: 200, 
-        height: 50, 
-        backgroundColor: '#f4511e',
-        borderRadius: 20,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
 });

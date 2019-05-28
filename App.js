@@ -18,6 +18,8 @@ export default class App extends React.Component {
       'Raleway-Medium': require('./assets/fonts/Raleway-Medium.ttf'),
       'Raleway-Light': require('./assets/fonts/Raleway-Light.ttf'),
       'Quicksand-Medium': require('./assets/fonts/Quicksand-Medium.ttf'),
+      'Quicksand-Bold': require('./assets/fonts/Quicksand-Bold.ttf'),
+      'Quicksand-Light': require('./assets/fonts/Quicksand-Light.ttf')
       
     });
     console.log('font loaded');

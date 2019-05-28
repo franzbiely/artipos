@@ -15,7 +15,7 @@ export default class PopupButton extends React.Component {
   render() {
     return ( 
         <View style={styles.container}>
-            <View style={styles.container}>
+            <View style={styles.modalContainer}>
             <Modal
             style={{flex:1, alignItems: 'center', justifyContent: 'center'}}
             animationType="slide"
@@ -23,17 +23,17 @@ export default class PopupButton extends React.Component {
             visible={this.state.modalVisible}
             onRequestClose={() => {
             Alert.alert('Modal has been closed.');
-            }}>
-            <View style={styles.popupContainer}>
-                <View style={styles.popupBox}>
+            }}>  
+            <View style={styles.popupContainer}> 
+                <View style={styles.popupBox}>  
 
                     <View style={styles.popupHead}>
-                        <Text style={{color: '#6F0000'}}>{this.props.popupHeadName}</Text>
+                        <Text style={{color: 'white', fontFamily:'Quicksand-Bold', fontSize: 20 }}>{this.props.popupHeadName}</Text>
                     </View>
 
                     <View style={styles.popupBody}>
                         <View style={{alignItems:'center', justifyContent:'center', flexDirection:'row'}}>
-                            <Text style={styles.totalText}>Total:</Text><Text style={styles.totalText}> 120.00 </Text>
+                            <Text style={styles.totalText}>Total:</Text><Text style={styles.textTotal}> 120.00 </Text>
                         </View>
                         <View style={styles.buttonContainer}>
                             <View style={styles.button2}>
@@ -56,13 +56,12 @@ export default class PopupButton extends React.Component {
                             </View>
                         </View>
                     </View>
-
                 </View>
             </View>
             </Modal>
             <View style={styles.bottomContainer}>
                 <View style={{flex:1}}>
-                    <Text>Total:</Text>
+                    <Text style={{fontFamily:'Quicksand-Medium'}}>Total:</Text>
                 </View>
                 <View style={{flex:1, alignItems:'flex-end'}}>
                     <TouchableHighlight style={styles.popupButton} onPress={() => {this.setModalVisible(true);}}>
@@ -81,16 +80,22 @@ export default class PopupButton extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
+    width: '100%',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    },
+    modalContainer:{
       width: '100%',
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'center', 
+      backgroundColor: 'white',
     },
     popupText:{
-        fontWeight: '900',
         fontSize: 15,
         color: 'white',
-        fontFamily: 'Raleway'
+        fontFamily: 'Raleway-Bold'
     },
     popupBox:{
         width:deviceWidth-60,
@@ -100,12 +105,12 @@ const styles = StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0, 
-            height: 5,
+            height: 1,
         },
-        shadowOpacity: 0.34,
-        shadowRadius: 6.27,
+        shadowOpacity: 0.20,
+        shadowRadius: 6,
 
-        elevation: 10,
+        elevation: 5,
     },
     popupHead:{   
         height: 50,
@@ -113,7 +118,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         padding: 10,
-        backgroundColor: 'white',
+        backgroundColor: 'darkred',
         borderTopLeftRadius: 10,
         borderBottomWidth: 1,
         borderColor: '#f2f2f2',
@@ -134,16 +139,16 @@ const styles = StyleSheet.create({
     },
     popupContent:{
         color: 'white',
-        fontWeight: "900",
+        fontFamily: 'Raleway-Light',
         fontSize: 20 
     },
     popupButton:{
         width: 150, 
-        height: 50, 
+        height: 40, 
         backgroundColor: '#6F0000',
         borderRadius: 10,
         alignItems: 'center',
-        justifyContent: 'center' 
+        justifyContent: 'center',
     },
     buttonContainer:{
         flexDirection: 'row',
@@ -155,15 +160,15 @@ const styles = StyleSheet.create({
         width: '48%'
     },
     buttonText:{
-        fontSize: 18,
+        fontSize: 15,
         color: 'white',
-        fontFamily: 'Raleway-Medium'
+        fontFamily: 'Raleway-Bold'
     },
     buttonCancel:{
         backgroundColor: 'gray',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 50,
+        height: 40,
         borderRadius: 10,
         marginRight: 10
     },
@@ -171,11 +176,16 @@ const styles = StyleSheet.create({
         backgroundColor: 'darkred',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 50,
+        height: 40,
         borderRadius: 10
     },
     totalText:{
-        fontSize: 30
+        fontSize: 30,
+        fontFamily: 'Quicksand-Medium'
+    },
+    textTotal:{
+        fontSize: 30,
+        fontFamily: 'Quicksand-Bold'
     },
     bottomContainer:{
         flexDirection: 'row',

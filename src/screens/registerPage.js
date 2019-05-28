@@ -80,10 +80,10 @@ const styles = StyleSheet.create({
         paddingRight: 15,
         borderRadius: 5,
         marginTop: 5,
-        fontFamily: 'Raleway'
+        fontFamily: 'Quicksand-Light'
     },
     label:{
-        fontFamily: 'Raleway-Bold',
+        fontFamily: 'Quicksand-Bold',
         marginLeft: 4
     },
     inputTextBox:{

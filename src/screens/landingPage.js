@@ -5,6 +5,11 @@ import TableScreen from './tableScreen';
 import OrderScreen from './orderScreen';
 import LoginScreen from './loginPage';
 import RegisterScreen from './registerPage';
+import ForgotPasswordScreen from './forgotPassword';
+import ResetPasswordScreen from './resetPassword';
+import CreateItemScreen from './createItem';
+import CreateDiscountScreen from './createDiscount';
+
 export class FirstScreen extends React.Component {
 
   render() {  
@@ -27,6 +32,9 @@ export class FirstScreen extends React.Component {
                 <TouchableOpacity style={styles.registerButton}  onPress={() => this.props.navigation.navigate('register')}>
                     <Text style={styles.buttonText} >Register</Text>
                 </TouchableOpacity>
+                <View style={{marginTop: 15, justifyContent:'center', alignItems: 'center'}}>
+                  <Text onPress={() => this.props.navigation.navigate('forgotpassword')} style={{fontFamily:'Quicksand-Light'}}>Forgot Password?</Text>
+                </View>
             </View>
         </View>
     );
@@ -132,10 +140,14 @@ const FadeTransition  = (index, position) => {
       table: TableScreen,
       order: OrderScreen, 
       login: LoginScreen,
-      register: RegisterScreen
+      register: RegisterScreen,
+      forgotpassword: ForgotPasswordScreen,
+      resetpassword: ResetPasswordScreen,
+      createitem: CreateItemScreen,
+      creatediscount: CreateDiscountScreen
       },      
       {  
-      initialRouteName: 'landing',
+      initialRouteName: 'landing',   
       transitionConfig: navigationConfig,
       defaultNavigationOptions:{
         headerStyle: {
@@ -143,7 +155,7 @@ const FadeTransition  = (index, position) => {
         },                    
         headerTintColor: '#fff',
         headerTitleStyle: {
-          fontFamily: 'Quicksand-Medium',
+          fontFamily: 'Quicksand-Bold',
           fontWeight: undefined,
           fontSize: 17,
           marginLeft: -2

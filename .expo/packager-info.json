@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 18860,
+  "packagerPid": 9120,
   "expoServerNgrokUrl": "https://k5-6df.anonymous.apos.exp.direct",
   "packagerNgrokUrl": "https://packager.k5-6df.anonymous.apos.exp.direct",
-  "ngrokPid": 18720
+  "ngrokPid": 4084
 }
