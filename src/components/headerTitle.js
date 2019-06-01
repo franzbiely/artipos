@@ -7,7 +7,7 @@ export default class Test extends React.Component {
   render() {
     console.log(this.props.navigation);
     return ( 
-      <Text></Text>
+      <Text>Hello</Text>
     );
   }
 }

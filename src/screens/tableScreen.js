@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar} from 'react-native';
 import TableButton from '../components/tableButton';
-import SidebarButton from '../components/sidebarButton';
+// import SidebarButton from '../components/sidebarButton';
 
 export default class TableScreen extends React.Component {
 
   static navigationOptions =  {
       title: "Home",
-      headerLeft: <SidebarButton />,
+      // headerLeft: <SidebarButton />,    
   }; 
 
   render() { 

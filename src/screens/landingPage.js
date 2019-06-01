@@ -1,16 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity, Image,StatusBar } from 'react-native';
-import { createStackNavigator, createAppContainer, Header } from 'react-navigation';
-import TableScreen from './tableScreen';
-import OrderScreen from './orderScreen';
-import LoginScreen from './loginPage';
-import RegisterScreen from './registerPage';
-import ForgotPasswordScreen from './forgotPassword';
-import ResetPasswordScreen from './resetPassword';
-import CreateItemScreen from './createItem';
-import CreateDiscountScreen from './createDiscount';
 
-export class FirstScreen extends React.Component {
+
+export default class FirstScreen extends React.Component {
 
   render() {  
  
@@ -107,69 +99,5 @@ const styles = StyleSheet.create({
     }
 });
 
-const FadeTransition  = (index, position) => {
-    const sceneRange = [index-1, index];
-    const outputOpacity = [0,1];
-    const transition = position.interpolate({
-      inputRange: sceneRange,
-      outputRange: outputOpacity,
-    });
-    return{
-      opacity: transition
-    }
-  }
-  
-  const navigationConfig = () => {
-    return{
-      screenInterpolator: (sceneProps) => {
-        const position = sceneProps.position;
-        const scene = sceneProps.scene;
-        const index = scene.index;
-  
-        return FadeTransition(index,position);
-      }
-    }
-  }   
-  const AppStackNavigator = createStackNavigator({
-      landing: {
-        screen: FirstScreen,
-        navigationOptions: {
-          header: null,
-      },
-      },
-      table: TableScreen,
-      order: OrderScreen, 
-      login: LoginScreen,
-      register: RegisterScreen,
-      forgotpassword: ForgotPasswordScreen,
-      resetpassword: ResetPasswordScreen,
-      createitem: CreateItemScreen,
-      creatediscount: CreateDiscountScreen
-      },      
-      {  
-      initialRouteName: 'landing',   
-      transitionConfig: navigationConfig,
-      defaultNavigationOptions:{
-        headerStyle: {
-          backgroundColor: '#6F0000',
-        },                    
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontFamily: 'Quicksand-Bold',
-          fontWeight: undefined,
-          fontSize: 17,
-          marginLeft: -2
-        },
-      } 
-        
-  }
-    );
-     
-  const AppContainer = createAppContainer(AppStackNavigator);
+
    
-  export default class Navigator extends React.Component {
-   
-    render() {
-      return <AppContainer />;
-    }
-  }

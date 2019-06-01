@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigator from './src/screens/landingPage';
+import Navigator from './src/screenNavigator';
 import { Font } from 'expo';
 
 export default class App extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {
+    this.state = {    
       fontLoaded: false
     }
   }
@@ -22,7 +22,7 @@ export default class App extends React.Component {
       'Quicksand-Light': require('./assets/fonts/Quicksand-Light.ttf')
       
     });
-    console.log('font loaded');
+    // console.log('font loaded');
     this.setState({fontLoaded: true})
   }
   render() {
