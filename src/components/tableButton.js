@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     width: 100,
     height: 100,
-    margin: 10
+    margin: 10,
+    marginTop: 30
   },
 
   tableText:{

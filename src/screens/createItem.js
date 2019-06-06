@@ -1,18 +1,22 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar, TextInput, Text, Dimensions, TouchableOpacity } from 'react-native';
-
+import { Icon } from 'native-base';
 export default class CreateItemScreen extends React.Component {
 
    static navigationOptions = { 
-        title: "Create Item",  
-      };  
+        header: null 
+  };  
 
   render() {  
 
     return (
       <View style={styles.container}>
         <View>
-          <StatusBar barStyle = "light-content" hidden = {false} translucent = {true}/>
+          <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
+        </View>
+        <View style={{width:'100%', textAlign:'left', position:'absolute', top:40, left: 20, flexDirection:'row', alignItems: 'center'}}>
+          <Icon name="md-menu" style={{marginTop: 8}} color="#6F0000" size={32} onPress={() => this.props.navigation.openDrawer()} />
+          <Text style={styles.titleText} >Create Item</Text>     
         </View>
         <View style={styles.inputTextBox}>
             <View style={styles.inputTextContainer}>
@@ -49,6 +53,12 @@ const styles = StyleSheet.create({
     inputTextContainer:{
         marginTop: 20
     },
+    titleText:{
+      fontFamily: 'Quicksand-Light',
+      fontSize:40,
+      color: "#870000",
+      marginLeft: 25
+    },
     inputText:{
         width: Dimensions.get('window').width-70,
         borderWidth: 1,
@@ -61,12 +71,12 @@ const styles = StyleSheet.create({
         marginTop: 5,
         fontFamily: 'Quicksand-Light'
     },
+    inputTextBox:{
+      marginTop: 100
+    },
     label:{
         fontFamily: 'Quicksand-Bold',
         marginLeft: 4
-    },
-    inputTextBox:{
-        marginTop: 30
     },
     loginButton:{
         borderRadius: 10,

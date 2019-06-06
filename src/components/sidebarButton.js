@@ -3,12 +3,12 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export default class SidebarButton extends React.Component{
-   test( ){
-        console.log('alertWord');
-    }
+//    test( ){
+//         console.log('alertWord');
+//     }
     render(){
         return(
-            <TouchableOpacity style={styles.burger} onPress={this.test.bind(this.props.alert)}>
+            <TouchableOpacity style={styles.burger} onPress={() => this.props.navigation.openDrawer()}>
                 <Ionicons   
                 name="md-menu"
                 color="white"

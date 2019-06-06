@@ -12,7 +12,10 @@ export default class ResetPasswordScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View>
-          <StatusBar barStyle = "light-content" hidden = {false} translucent = {true}/>
+          <StatusBar barStyle = "dark-content" />
+        </View>
+        <View style={{width:'100%', textAlign:'left', marginTop: 40, marginLeft: 40}}>
+          <Text style={styles.titleText}>Reset Password</Text>
         </View>
         <View style={styles.inputTextBox}>
             <View style={styles.inputTextContainer}>
@@ -41,6 +44,11 @@ const styles = StyleSheet.create({
     inputTextContainer:{
         marginTop: 20
     },
+    titleText:{
+      fontFamily: 'Quicksand-Light',
+      fontSize: 40,
+      color: "#870000"
+    },
     inputText:{
         width: Dimensions.get('window').width-70,
         borderWidth: 1,
@@ -56,9 +64,6 @@ const styles = StyleSheet.create({
     label:{
         fontFamily: 'Quicksand-Bold',
         marginLeft: 4
-    },
-    inputTextBox:{
-        marginTop: 30
     },
     loginButton:{
         borderRadius: 10,

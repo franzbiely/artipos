@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigator from './src/screenNavigator';
 import { Font } from 'expo';
+import { View, StatusBar } from 'react-native';  
 
 export default class App extends React.Component {
   constructor (props) {
@@ -27,7 +28,8 @@ export default class App extends React.Component {
   }
   render() {
     return this.state.fontLoaded ?(
-     <Navigator />
+
+      <Navigator />
       
     ):
     (

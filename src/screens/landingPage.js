@@ -3,14 +3,16 @@ import { StyleSheet, Text, View,TouchableOpacity, Image,StatusBar } from 'react-
 
 
 export default class FirstScreen extends React.Component {
-
+  static navigationOptions = { 
+    header: null 
+  }; 
   render() {  
- 
+   
     return (    
         
         <View style={styles.container}>
           <View>
-          <StatusBar barStyle = "dark-content" hidden = {false} translucent = {true}/>
+          <StatusBar barStyle = "dark-content" hidden = {false} />
         </View>
             <View style={styles.logoContainer}>
                 <View style={styles.logo}><Image style={{width:250, height: 250, resizeMode : 'contain'}} source={require('../../assets/images/pos-logo.png')}></Image></View>

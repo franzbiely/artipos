@@ -1,10 +1,9 @@
 {
+  "expoServerNgrokUrl": "https://ei-yze.anonymous.apos.exp.direct",
+  "packagerNgrokUrl": "https://packager.ei-yze.anonymous.apos.exp.direct",
+  "ngrokPid": 6716,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 7436,
-  "expoServerNgrokUrl": "https://k5-6df.anonymous.apos.exp.direct",
-  "packagerNgrokUrl": "https://packager.k5-6df.anonymous.apos.exp.direct",
-  "ngrokPid": 8808,
-  "webpackServerPort": null
+  "packagerPort": null,
+  "packagerPid": null
 }
